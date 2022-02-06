@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RCG - Full Stack Developer Assessment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<h1>RCG - Full Stack Developer Assessment</h1>
+	<button type="button" id="add_employee">Add Employee</button>
+	<table id="employee_table">
+		<thead>
+			<tr>
+				<th>Options</th>
+				<th>Personal ID Number</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Hire Date</th>
+				<th>Job Title</th>
+				<th>Agency Number (If Applicable)</th>
+				<th>Registration Date</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<div id="employee_form_div" class="employee_form_div">
+		<fieldset>
+			<legend id="employee_form_legend"></legend>
+			<form id="employee_form" name="employee_form">
+				<div class="form-field">
+					<label for="person_id">Personal ID Number:</label>
+					<input id="person_id" name="person_id" type="text" placeholder="ID Number" required>
+				</div>
+				<div class="form-field">
+					<label for="first_name">First Name:</label>
+					<input id="first_name" name="first_name" type="text" placeholder="First Name" required>
+				</div>
+				<div class="form-field">
+					<label for="last_name">Last Name:</label>
+					<input id="last_name" name="last_name" type="text" placeholder="Last Name" required>
+				</div>
+				<div class="form-field">
+					<label for="email">Email Address:</label>
+					<input id="email" name="email" type="email" placeholder="Email Address" required>
+				</div>
+				<div class="form-field">
+					<label for="hire_date">Hire Date:</label>
+					<input id="hire_date" name="hire_date" type="date" required>
+				</div>
+				<div class="form-field">
+					<label for="job_title">Job Title:</label>
+					<select id="job_title" name="job_title" required>
+						<option value="">Select</option>
+						<option value="ta_rep_a">TA Rep A</option>
+						<option value="ta_rep_b">TA Rep B</option>
+						<option value="direct_rep_a">Direct Rep A</option>
+						<option value="direct_rep_b">Direct Rep B</option>
+					</select>
+				</div>
+				<div id="agency_num_field" class="form-field hidden">
+					<label for="agency_num">Agency Number:</label>
+					<input id="agency_num" name="agency_num" placeholder="Agency Number">
+				</div>
+				<div class="form-field">
+					<input type="submit" value="Submit">&nbsp;<button id="cancel_button" type="button">Cancel</button>
+				</div>
+				<div id="error_message" class="message-error"></div>
+			</form>
+		</fieldset>
+	</div>
+	<div class="overlay"></div>
+</body>
+</html>
